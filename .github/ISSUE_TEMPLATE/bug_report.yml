@@ -1,0 +1,38 @@
+# Αντίγραψε αυτό το αρχείο στο repo που δέχεται τα issues (ghost-eagle1/cockpit-releases),
+# στην ίδια διαδρομή .github/ISSUE_TEMPLATE/bug_report.yml — τότε η φόρμα «New issue» στο GitHub
+# ζητά τα ίδια πεδία που ζητά και η οθόνη «Αναφορές» της εφαρμογής.
+name: Αναφορά προβλήματος
+description: Κάτι δεν δουλεύει στο Cockpit
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: Τι έγινε
+      description: Τι έκανες, τι περίμενες, τι έγινε.
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Σοβαρότητα
+      options: ["Χαμηλή", "Κανονική", "Υψηλή"]
+      default: 1
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Έκδοση εφαρμογής
+      description: Το badge κάτω αριστερά στην εφαρμογή, π.χ. v0.1.0
+      placeholder: v0.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Πλατφόρμα
+      options: ["macOS", "Windows", "Linux"]
+    validations:
+      required: true
